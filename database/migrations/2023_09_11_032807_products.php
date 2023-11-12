@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title',50);
             $table->text('description');
             $table->float("cost");
+            $table->string("img", 100);
             $table->foreignid('categoru_id')->references('id')->on('categories');
         });
     }

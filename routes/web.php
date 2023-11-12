@@ -22,3 +22,4 @@ Route::get('/basket', [MainController::class,'basket'] );
 Route::get('/autho', [AuthController::class, 'auth']);
 Route::get('/register', [AuthController::class, 'regist']);
 Route::get('/personalcub', [AuthController::class, 'personal']);
+Route::get('/sidebar', [AuthController::class, 'personal']);

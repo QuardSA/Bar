@@ -389,7 +389,7 @@ hr {
 .main_personal {
     display: flex;
     /* justify-content: space-between; */
-    gap: 475px;
+    gap: 300px;
     margin-top: 30px;
 
 }

@@ -80,9 +80,10 @@ class AuthController extends Controller
       return view('personalcub');
    }
    public function personal_information () {
-       $personal = User::all();
-       dd($personal);
-      //  return view("personalcub", ["personalInfo"=> $personal]);
+       $personal = auth()->user();
+       
+    
+       return view("personalcub", ["personalInfo"=> $personal]);
    }
    
 }

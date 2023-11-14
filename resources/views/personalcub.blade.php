@@ -21,6 +21,8 @@
                   
                     </div>
                     <a href="signout"><button class="logout_pers">Выйти</button></a>
+
+                    <a href="/admin">Админ панель для ебланов </a>
                         </div>
                 </div>
                     <div>

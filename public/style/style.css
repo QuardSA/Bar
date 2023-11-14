@@ -617,9 +617,9 @@ hr {
 .price {
     font-weight: 700;
 }
-<<<<<<< HEAD
 
-.pagination{
+
+.pagination {
 --bs-pagination-padding-x: 0.75rem;
   --bs-pagination-padding-y: 0.375rem;
   --bs-pagination-font-size: 1rem;
@@ -640,11 +640,11 @@ hr {
   --bs-pagination-disabled-bg: var(--bs-firstly-bg);
   --bs-pagination-disabled-border-color: var(--bs-red-color);
   list-style: none;
-=======
+}
 .error {
     color: #FCEE0A;
 }
 .reg {
     padding-bottom: 80px;
->>>>>>> 0255c34323a15dba153da8803fc9f018d18ac7a4
+
 }

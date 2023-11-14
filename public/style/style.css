@@ -616,3 +616,26 @@ hr {
 .price {
     font-weight: 700;
 }
+
+.pagination{
+--bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 1rem;
+  --bs-pagination-color: black !important;
+  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-border-width: var(--bs-border-width);
+  --bs-pagination-border-color: var(--bs-border-color);
+  --bs-pagination-border-radius: var(--bs-border-radius);
+  --bs-pagination-hover-color: var(--bs-black-color);
+  --bs-pagination-hover-bg: var(--bs-black-bg);
+  --bs-pagination-hover-border-color: var(--bs-black-color);
+  --bs-pagination-focus-color: var(--bs-black-color);
+  --bs-pagination-focus-bg: var(--bs-black-bg);
+  --bs-pagination-active-color: #ffc107 !important;
+  --bs-pagination-active-bg: black !important;
+  --bs-pagination-active-border-color: #ffc107 !important;
+  --bs-pagination-disabled-color: var(--bs-firstly-color);
+  --bs-pagination-disabled-bg: var(--bs-firstly-bg);
+  --bs-pagination-disabled-border-color: var(--bs-red-color);
+  list-style: none;
+}

@@ -5,42 +5,17 @@
         <div class="container">
             <div class="main_catalog d-flex justify-content-center">
                 <div class="catalog_content">
+                    @forelse($products as $product)
                     <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
+                        <img src="img/{{$product ->img}}">
+                        <p>{{$product ->title}}</p>
+                        <span>{{$product ->cost}}</span>
+                        <a style="color:#FCEE0A;" href="/product/{{$product ->id}}">Купить</a>
                     </div>
-                    <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
-                    </div>
-                    <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
-                    </div>
-                    <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
-                    </div>
-                    <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
-                    </div>
-                    <div class="catalog_block">
-                        <img src="img/pivo3.jpg">
-                        <p>Пиво крепкое</p>
-                        <span>300 ₽</span>
-                        <a style="color:#FCEE0A;" href="/product">Купить</a>
-                    </div>
+                    @empty
+                    <p>Тут нету продуктов.</p>
+                    @endforelse
+                    {{ $products->withQueryString()->links('pagination::bootstrap-5') }}
                 </div>
             </div>
         </div>

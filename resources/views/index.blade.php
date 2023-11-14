@@ -36,28 +36,18 @@
                 <h2>ЕДА</h2>
             </div>
             <div class="product_content">
+                @forelse($products as $product)
                 <div class="product_block">
-                    <img src="img/pivo2.jpg">
-                    <p>Пиво крепкое</p>
-                    <span>300 ₽</span>
-                    <a style="color:#FCEE0A;" href="/product">Купить</a>
+                    <img src="img/{{$product ->img}}">
+                    <p>{{$product ->id}}</p>
+                    <p>{{$product ->title}}</p>
+                    <span>₽{{$product ->cost}}</span>
+                    <a style="color:#FCEE0A;" href="/product/{{$product ->id}}">Купить</a>
                 </div>
-
-                <div class="product_block">
-                    <img src="img/pivo.png">
-                    <p>Пиво крепкое</p>
-                    <span>300 ₽</span>
-                    <a style="color:#FCEE0A;" href="/product">Купить</a>
-                </div>
-
-                <div class="product_block">
-                    <img src="img/pivo3.jpg">
-                    <p>Пиво крепкое</p>
-                    <span>300 ₽</span>
-                    <a style="color:#FCEE0A;" href="/product">Купить</a>
-                </div>
+                @empty
+                <p>Тут нету продуктов.</p>
+                @endforelse
             </div>
-
         </div>
     </section>
 

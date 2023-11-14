@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CatalogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'index']);
-Route::get('/product', [MainController::class,'product'] );
-Route::get('/catalog', [MainController::class,'catalog'] );
+Route::get('/product/{prod}', [MainController::class,'product'] );
+Route::get('/catalog', [CatalogController::class,'Products'] );
 Route::get('/basket', [MainController::class,'basket'] );
 Route::get('/autho', [AuthController::class, 'auth']);
 Route::get('/register', [AuthController::class, 'regist']);

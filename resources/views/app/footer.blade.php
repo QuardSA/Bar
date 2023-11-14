@@ -9,9 +9,9 @@
                 <h2>Too Much, Too Little</h2>
             </div>
             <div>
-                <img src="img\socials.png">
-                <img src="img\socials2.png">
-                <img src="img\socials3.png">
+                <img src="/img\socials.png">
+                <img src="/img\socials2.png">
+                <img src="/img\socials3.png">
             </div>
         </div>
         <div>

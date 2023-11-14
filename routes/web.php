@@ -21,6 +21,17 @@ Route::get('/product/{prod}', [MainController::class,'product'] );
 Route::get('/catalog', [CatalogController::class,'Products'] );
 Route::get('/basket', [MainController::class,'basket'] );
 Route::get('/autho', [AuthController::class, 'auth']);
+
+Route::post('/auth_valid', [AuthController::class,'auth_valid']);
+
 Route::get('/register', [AuthController::class, 'regist']);
+
+Route::post('/reg_valid', [AuthController::class,'reg_valid']);
+
 Route::get('/personalcub', [AuthController::class, 'personal']);
+
+Route::get('/personalcub', [AuthController::class, 'personal_information']);
+
+
+Route::get("/signout",[AuthController::class, 'signout'] ) ->name("signout");
 Route::get('/sidebar', [AuthController::class, 'personal']);

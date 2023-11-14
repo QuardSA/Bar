@@ -6,16 +6,19 @@
             <h2>
                 Вход
             </h2>
-
-            <form method="POST" action="" class="auth">
+            @if (session("error"))
+        {{session("error")}}
+        @endif
+            <form method="POST" action="/auth_valid" class="auth">
+                @csrf
                 <div class="auth_element">
                 <label>Электронная почта</label>
-                <input type="email" name="email">
+                <input type="email" name="email" placeholder="  @error('email') {{$message}}  @enderror">
                 <div class="element_input"></div>
                 </div>
                 <div class="auth_element">
                 <label>Пароль</label>
-                <input type="password" name="password" >
+                <input type="password" name="password"   placeholder="  @error('password') {{$message}}  @enderror">
                 <div class="element_input"></div>
                 </div>
                 <div>

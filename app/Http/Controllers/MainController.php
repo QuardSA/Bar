@@ -13,7 +13,7 @@ class MainController extends Controller
     public function product($prod) {
         $prod = Product::find($prod);
         return view('product',["prod" => $prod]);
-    }
+  }
     public function catalog() {
         return view('catalog');
     }

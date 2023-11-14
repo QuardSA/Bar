@@ -370,7 +370,8 @@ hr {
 }
 
 .register {
-    height: 750px;
+  height: auto;
+  
 }
 
 /* Личный кабинет */
@@ -388,7 +389,7 @@ hr {
 .main_personal {
     display: flex;
     /* justify-content: space-between; */
-    gap: 475px;
+    gap: 300px;
     margin-top: 30px;
 
 }
@@ -616,6 +617,7 @@ hr {
 .price {
     font-weight: 700;
 }
+<<<<<<< HEAD
 
 .pagination{
 --bs-pagination-padding-x: 0.75rem;
@@ -638,4 +640,11 @@ hr {
   --bs-pagination-disabled-bg: var(--bs-firstly-bg);
   --bs-pagination-disabled-border-color: var(--bs-red-color);
   list-style: none;
+=======
+.error {
+    color: #FCEE0A;
+}
+.reg {
+    padding-bottom: 80px;
+>>>>>>> 0255c34323a15dba153da8803fc9f018d18ac7a4
 }

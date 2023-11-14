@@ -33,9 +33,14 @@
                     <a>Напитки</a>
                 </div>
                 <div class="nav_block_twod d-flex justify-content-evenly aling-items-center">
+                @guest
                     <a href="/autho">Войти</a>
                     <a href="/register">Регистрация</a>
+                    @endguest
+                    @auth
                     <a href="/personalcub">Кабинет</a>
+                    <a href="/signout">Выход</a>
+                    @endauth
                 </div>
             </div>
             <div class="triangle">

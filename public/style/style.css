@@ -370,7 +370,8 @@ hr {
 }
 
 .register {
-    height: 750px;
+  height: auto;
+  
 }
 
 /* Личный кабинет */
@@ -615,4 +616,10 @@ hr {
 
 .price {
     font-weight: 700;
+}
+.error {
+    color: #FCEE0A;
+}
+.reg {
+    padding-bottom: 80px;
 }

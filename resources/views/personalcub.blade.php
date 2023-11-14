@@ -13,7 +13,7 @@
                     <img src="/img/elementper.png" class="element_personal">
                         <div class="info_pers">
                                 <div>
-                    <p>Имя  <span>[Алексей]</span></p>
+                    <p>Имя  <span>{{$personalInfo->name}}</span></p>
                     <p>Фамилия  <span>[Алексей]</span></p>
                     <p>Отчество  <span>[Алексей]</span></p>
                     <p>Номер телефона  <span>[Алексей]</span></p>
@@ -21,7 +21,7 @@
                     <p>Возраст  <span>[Алексей]</span> </p>
                     </div>
                     <button class="redict_pers">Редактировать</button>
-                    <button class="logout_pers">Выйти</button>
+                    <a href="signout"><button class="logout_pers">Выйти</button></a>
                         </div>
                 </div>
                     <div>

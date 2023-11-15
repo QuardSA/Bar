@@ -6,7 +6,10 @@ body {
     background-color: #FCEE0A;
 
 }
-
+.sidebar{
+    max-width: 280px;
+    position: fixed;
+}
 /* Главная страница, Шапка и Подвал */
 header {
     background-color: black;

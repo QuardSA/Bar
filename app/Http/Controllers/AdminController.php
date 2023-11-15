@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\User;
 use App\Models\products;
 use App\Models\categories;
@@ -37,5 +38,26 @@ class AdminController extends Controller
         if ($product) {
             return redirect("/")->with("success","");
         }
+
+    }
+
+    public function ordersDeny(){
+        return view('admin.ordersDeny');
+    }
+        public function ordersNew(){
+        return view('admin.ordersNew');
+    }
+        public function ordersProg(){
+        return view('admin.ordersProg');
+    }
+        public function ordersSub(){
+        return view('admin.ordersSub');
+    }
+        public function serviceRedact(){
+        return view('admin.serviceRedact');
+    }
+        public function userRedact(){
+        return view('admin.userRedact');
+
     }
 }

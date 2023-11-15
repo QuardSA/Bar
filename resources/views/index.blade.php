@@ -39,7 +39,6 @@
                 @forelse($products as $product)
                 <div class="product_block">
                     <img src="img/{{$product ->img}}">
-                    <p>{{$product ->id}}</p>
                     <p>{{$product ->title}}</p>
                     <span>₽{{$product ->cost}}</span>
                     <a style="color:#FCEE0A;" href="/product/{{$product ->id}}">Купить</a>
@@ -50,6 +49,5 @@
             </div>
         </div>
     </section>
-
-
+        <script src="/script/sidebars.js"></script>
 @endsection('content')

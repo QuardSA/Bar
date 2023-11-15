@@ -1,4 +1,4 @@
-@include('admin.inc.sidebar')
+
 <!DOCTYPE html>
 <html>
 <head>

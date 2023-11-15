@@ -37,7 +37,6 @@ class AuthController extends Controller
      }
      return redirect()->back()->with("error","Неверный логин или пароль");
    }
-
    public function regist() {
       return view('auth.register');
    }

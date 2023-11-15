@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\order;
 use App\Models\products;
 use App\Models\categories;
 use Illuminate\Support\Facades\Storage;
@@ -30,29 +31,26 @@ class AdminController extends Controller
             "cost" =>$addproduct["cost"],
             "img"=>$file_name,
             "categoru_id"=>$addproduct["categoru_id"]
-
         ]);
         if ($product) {
             return redirect("/admin/serviceRedact")->with("success","");
         }
-
-    }
-
-    public function ordersDeny(){
-        return view('admin.ordersDeny');
     }
         public function ordersNew(){
-        return view('admin.ordersNew');
+            $orders = order::where('id_status',1)->paginate(10);
+        return view('admin.ordersNew', compact('orders'));
     }
-        public function ordersProg(){
-        return view('admin.ordersProg');
+        public function ordersDeny(){
+            $orders = order::where('id_status',2)->paginate(10);
+        return view('admin.ordersDeny', compact('orders'));
     }
         public function ordersSub(){
-        return view('admin.ordersSub');
+            $orders = order::crossJoin('status'->crossJoin('users'->crossJoin('baskets'->crossJoin('payments'->select('*')->where('orders.id_status','status.id')->where('orders.basket_id','baskets.id')->where('baskets.user_id','users.id')->where('orders.id_type','payments.id')->where('id_status',3)))))->paginate(10);
+
+        return view('admin.ordersSub', compact('orders'));
     }
         public function serviceRedact(){
             $categoria= categories::all();  
         return view('admin.serviceRedact',["categories" => $categoria]);
-    }
-      
+    }     
 }

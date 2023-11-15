@@ -5,8 +5,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
 <link href="style/sidebars.css" rel="stylesheet">
-<section class="sidebar">
-    <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+<section class="sidebar ">
+    <div class="flex-shrink-0 p-3 bg-white sidebar_bacg" style="width: 280px;">
     <div class="d-flex align-items-center pb-1 mb-1 link-dark text-decoration-none">
       <span class="fs-5 fw-semibold">ФИО</span>
     </div>

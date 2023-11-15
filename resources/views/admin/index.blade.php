@@ -9,7 +9,7 @@
     <input type="file" name="img">
 <select name="categoru_id"> 
     @foreach ($categories as $item )
-    <option value="{{ $item->id}}"> {{ $item->id}}</option>
+    <option value="{{ $item->id}}"> {{ $item->title}}</option>
     @endforeach
 </select>
     <input type="submit">

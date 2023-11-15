@@ -651,3 +651,14 @@ hr {
     padding-bottom: 80px;
 
 }
+.sidebar_bacg {
+    background-color: #FCEE0A !important;
+    border: 1px solid #000;
+    color: #FCEE0A;
+}
+.sidebar_bacg li {
+    color: #FCEE0A;
+}
+.sidebar_bacg hr {
+
+}

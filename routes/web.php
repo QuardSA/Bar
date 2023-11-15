@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
-
+use  Illuminate\Support\Facades\Auth;
 
 
 
@@ -49,6 +49,8 @@ Route::get("/signout",[AuthController::class, 'signout'] ) ->name("signout");
 Route::get('/sidebar', [AuthController::class, 'personal']);
 
 
+
+
 Route::get("/admin",[AdminController::class, 'index']) -> name("admin");
 
 Route::post("/addproduct",[AdminController::class, 'addproduct']);
@@ -60,4 +62,6 @@ Route::get('admin/ordersProg', [AdminController::class,'ordersProg'] );
 Route::get('admin/ordersSub', [AdminController::class,'ordersSub'] );
 Route::get('admin/serviceRedact', [AdminController::class,'serviceRedact'] );
 Route::get('admin/userRedact', [AdminController::class,'userRedact'] );
+
+
 

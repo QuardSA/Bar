@@ -16,10 +16,7 @@ class AdminController extends Controller
 {
     //
 
-    public function index () {
-        $categoria= categories::all();  
-        return view('admin.index',["categories" => $categoria]);
-    }
+ 
    
     public function addproduct (Request $request) {
         $addproduct= $request->all();
@@ -36,7 +33,7 @@ class AdminController extends Controller
 
         ]);
         if ($product) {
-            return redirect("/")->with("success","");
+            return redirect("/admin/serviceRedact")->with("success","");
         }
 
     }
@@ -54,10 +51,8 @@ class AdminController extends Controller
         return view('admin.ordersSub');
     }
         public function serviceRedact(){
-        return view('admin.serviceRedact');
+            $categoria= categories::all();  
+        return view('admin.serviceRedact',["categories" => $categoria]);
     }
-        public function userRedact(){
-        return view('admin.userRedact');
-
-    }
+      
 }
